@@ -1,0 +1,12 @@
+.act:active{
+    background-color: crimson;
+    color: crimson;
+}
+.act:hover{
+    background-color: darkgrey;
+    color: darkmagenta;
+}
+
+/* .act:hover{
+    background-color: darkgreen;
+} */

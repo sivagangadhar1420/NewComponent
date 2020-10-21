@@ -1,0 +1,480 @@
+<!-- <p>pipes-folder works!</p>
+<h1>Pipes working</h1>
+{{dateofbirth}}<br>
+
+Date:Formats:
+{{dateofbirth | date}}<br>
+
+Medium: {{dateofbirth | date: 'medium'}}
+<br>
+Small: 
+
+{{dateofbirth | date: 'short'}}
+<br>
+fullDate:
+{{dateofbirth | date: 'fullDate'}}
+
+<br>
+Time:   
+{{dateofbirth | date: 'shortTime'}}
+<br>
+FullTile:
+
+{{dateofbirth | date: 'fullTime'}}
+<br><br>
+
+Result of pipe is : {{pbirth | apipe}}
+<br> <br>
+
+Result of Secondpipe is : {{pbirth | spipe}}
+
+<br><br>
+
+
+Result If Else  of Secondpipe is : {{pbirth | spipe : 'y'}}
+<br>
+
+Result If Else  of Secondpipe is : {{pbirth | spipe : 'm'}}
+<br><br>
+Result If Else  of Secondpipe is : {{pbirth | spipe : ''}}
+
+
+
+<div class="container">
+    <div class="s1">
+        <input type="number" [(ngModel)]="firstValue"><br><br>
+        <input type="number"  [(ngModel)]="secondvalue"><br><br>
+        
+        <button class="s2" (click)="add()">+</button>
+        <button class="s2" (click)="dev()">/</button>
+        <button  class="s2"(click)="sub()">-</button>
+        <button class="s2" (click)="multiple()">*</button>
+        <button  class="s2"(click)="Mod()">%</button>
+        <h1>the sum of {{firstValue}} and  {{secondvalue}} is: {{result}}</h1>
+        <input type="text" name="rers" id="ss" [(ngModel)]= "result"><br><br><br>
+
+        <h1>Indian Currency to American Currencys </h1>
+     Indian rupees: <input type="number"  [(ngModel)]="inp1" (keyup)="f1()"><br>
+     American currency's  ($'s') :  <input type="number" [(ngModel)]="inp2" (keyup)="f2()">
+      
+     <h1>{{inp1}} rupees of Indian is Equal to  {{inp2}} of American currency</h1>
+     
+     <h1>Amrican Currency to Indian rupees</h1>
+
+     American currency:  <input type="number" [(ngModel)]="inp2" (keyup)="f3()" ><br>
+     Indian rupees:      <input type="number"  [(ngModel)]="inp1" (keyup)="f4()">
+        
+        <h1>{{rupees}}</h1>
+        <h1> indian currency {{inp1}} and ac{{inp2}}</h1> 
+
+
+        US currency: <input type="number" name="nmmm" id="nmmm" [(ngModel)] = 'dollars' (keyup) = "res()">
+        Indian Paisa: <input type="number" name="nmmm1" id="nmmm1" [(ngModel)] = 'paisa' (keyup) = "res1()">
+        
+        
+        
+        </div>
+    
+        <h1>Number Pipes</h1>
+        {{numbs}} <br> <br>
+        {{numbs | number: '4.3-4'}} 
+        <br>
+        <br>
+        {{numbs | number: '4.3-5'}}
+        <br> <br>
+        
+        {{numbs | number: '6.9-11'}} <br> <br>
+    {{numbs | number: '11.3-5'}}
+        <br><br>
+              {{numbs | number: '6.3-5'}}
+
+              <h1>Currency converter</h1>
+              {{salary}}
+              <br>
+              {{salary | currency : 'INR':true}} <br> <br>
+         
+              {{salary | currency : 'USD':true}}<br> <br>
+              
+              {{salary | currency : 'EUR':true}}
+              <br><br>
+              
+              {{salary | currency : '':true}}
+              <br><br>
+              
+              {{salary | currency : 'INR':false}}
+              <br><br>
+              Particular amount:{{salary | currency : '':true : '6.3-5'}}
+              <br><br>
+              <h1>Percentage</h1>
+
+              {{myPercentage}} 
+              <br><br>
+              {{myPercentage | percent }} 
+              <br><br>
+              <br><br>
+
+              {{stringConvert | uppercase}}
+              <br>
+              
+              {{stringConvert | lowercase}}
+
+              <h1>SliceChars</h1>
+              {{schars}} 
+              <br>
+              {{schars | slice :2:4 }}
+              <br>
+              {{schars | slice : -5 }}
+              <br>
+              {{schars | slice : 5 }}
+              <br>
+              {{schars | slice :-2:4 }}
+                  <br>
+              {{schars | slice :6:8 }}
+
+              <br><br>
+              {{schars | slice :2:5 }}
+
+              {{schars | slice : -9:-2 }}   -->
+
+              <!-- Object Format -->
+              <!-- <h1>obj1 Format</h1>
+              
+              {{obj1 | json}}
+              {{obj1 }}
+
+              {{arobj1 | json}}
+            </div>  -->
+
+                                                    <!-- Searching Employees -->
+
+<!-- <div class="form">
+    <input type="text" name="nm" id="nm" class="form-control" [(ngModel)] = "search">
+
+</div>
+
+<div *ngFor= "let p of employees | spipe : search">
+    Name: {{p.name}}  {{p.id}} <br>
+    Age: {{p.age}}  <br>
+salary:  {{p.sal}}<br>
+DateOfJoining: {{p.DateOfjoining}}<br>
+TypeOfEmployee:  {{p.empType}}<br>
+
+
+</div> -->
+
+
+                            <!-- Filtering Max and Min Employyes based on Salaries  -->
+
+
+            <!-- <div *ngFor ="let otp of employees |  spipe : 10000:40000 ">
+            Name: {{otp.name}}  {{otp.id}} <br>
+              Age: {{otp.age}}  <br>
+          salary:  {{otp.sal}}<br>
+          DateOfJoining: {{otp.DateOfjoining}}<br>
+         TypeOfEmployee:  {{otp.empType}}<br>
+         <br><br> 
+         
+        </div>   -->
+            
+            <!-- <div class="container">
+                <div class="card" *ngFor = "let fres of employees">
+                    <div class="card-body">
+                        <div class="card-header">
+                            Name Of Employee : {{fres.name}}
+                            
+                        </div>
+                        <div class="card-text">
+                            Age: {{fres.age}}  <br>
+                            salary:  {{fres.sal}}<br>
+                            DateOfJoining: {{fres.DateOfjoining}}<br>
+                        <br>
+                          
+                        </div>
+                        <div class="card-footer">
+                            TypeOfEmployee:  {{fres.empType}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+               -->
+
+                            <!-- fetching the Data of Jurrassic parks -->
+      <div class="container">
+        <input type="text" name="nm1" id="nm1" class="form-control" [(ngModel)] ="searchItem">
+          <div class="card-columns">
+                  <div class="card" *ngFor="let mvs of movies | spipe : searchItem">
+
+                   <div class="card-body">
+                  <div class="card-header">
+                  
+                      Type OF Image:     {{mvs.Type}}
+                  </div>
+                
+                    <div class="card-image" style="width: 100%;">
+                            <img src="{{mvs.Poster}}" alt="img" width="100%">
+                    </div>
+                    
+                    <div class="card-text">
+                  Titlle of Image:   {{mvs.Title}}
+
+
+                    </div>
+                    <div class="card-footer">
+                       Year :  {{mvs.Year}} 
+                    </div>
+                </div>
+ 
+                   </div>
+               </div>
+            </div>
+
+
+            <!--Impure Pipes -->
+
+            <!-- <input type="text" name="mm" id="mm" [(ngModel)]= "fpipe" #ref1>
+            <button (click)="addpipeData(ref1.value)">AddPipeData</button>
+            {{fData | jPipe}} -->
+
+            <!-- <input type="text" name="mm" id="mm" [(ngModel)]= "fpipe">
+            <button (click)="addpipeData()">AddPipeData</button>
+            {{finalres | jPipe}}
+
+            <p showalert color="{{crmsn}}">Hello Custom attribute</p>
+            {{crmsn}}
+             -->
+
+
+
+                            <!-- Pushing the Data To an Array -->
+
+        <!-- <input type="text" name="mm" id="mm" [(ngModel)]= "gData" #reff>
+            <button (click)="getpData(reff.value)">AddPipeData</button>
+            {{fpipe}} -->
+
+            <!-- <input type="text" name="mm" id="mm" [(ngModel)]= "gData" >
+            <button (click)="getpData()">AddPipeData</button>
+            {{fpipe}} -->
+         
+           
+           
+
+
+
+
+                                   <!-- Pushing the Data to Array -->
+
+                    <!-- <input type="text" name="mm" id="mm" [(ngModel)]= "arp1" #ref2>
+                    <button (click)="addData(ref2.value)">AddData</button>
+                    <br>
+                    {{res}} -->
+
+                 
+            
+
+
+
+
+
+
+
+
+
+
+            <!-- Getting Data after clicking the button -->
+
+                <!-- <h1>Impure Pipes</h1>
+               
+                <input type="text" name="nn" id="nn" [(ngModel)]="inPipe" #ref1>
+                <button (click) = "addPipe1(ref1.value)">Click1</button>
+                <button (click) = "addPipe()">Click</button>
+                <div>{{exmp}}</div>
+                {{inPipe}} -->
+
+                
+
+                <!-- <nav class="navbar navbar-expand-md bg-dark navbar-dark " > -->
+                    <!-- Brand -->
+                    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                  
+                    <!-- Toggler/collapsibe Button -->
+                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                   -->
+                    <!-- Navbar links -->
+                    <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        
+                                     <ul class="navbar-nav ">
+                                    <li class="nav-item">
+                                       <a class="nav-link" href="#">Link</a>
+                                     </li>                                  
+                                    </ul>
+                                                          
+                                    <div class="container-fluid ">        
+                                        <ul class="navbar-nav mr-auto" >
+                                            
+                                        <li class="nav-item active">
+                                        <input type="text" name="" id="" class="form-control" style="width: 55vw;">
+                                  
+                                         </li>
+
+                                   
+                                    </ul>
+                                    </div>
+
+                   <ul class="navbar-nav ml-auto" >
+               <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>              <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li> <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li>
+                      </ul>
+                    
+        
+                      
+               
+                </div>
+                      
+            
+                  </nav>
+
+
+                  <nav class="navbar navbar-expand-md bg-dark navbar-dark " >
+            
+                    <a class="navbar-brand" href="#">Navbar</a>
+                  
+            
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+        
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        
+                                     <ul class="navbar-nav mr-auto ">
+                                    <li class="nav-item">
+                                       <a class="nav-link" href="#">Link</a>
+                                     </li>                                  
+                                   <li class="nav-item active">
+                                   
+                                           <input type="text" name="" id="" class="form-control">
+                                    
+
+                                   </li>
+                                </ul>
+                                   
+                                <ul class="navbar-nav mr-auto ">
+                                    <li class="nav-item">
+                                       <a class="nav-link" href="#">Link</a>
+                                     </li>                                  
+                                   <li class="nav-item active">
+                                   
+                                           <input type="text" name="" id="" class="form-control">
+                                    
+
+                                   </li>
+                                </ul>
+                                      
+                               
+
+                              
+
+            
+           <ul class="navbar-nav ml-auto" >
+               <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>              <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li> <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li>
+                      </ul>
+                    
+        
+                      
+               
+                </div>
+                      
+            
+                  </nav>
+                         -->
+                         <div class="row text-center bg-info p-4" >
+                             <div class="col-md">Text</div>
+                             <div class="col-md">Text</div>
+                             <div class="col-md">Text</div>
+                         </div>
+
+
+                         <ul class="nav nav-tabs">
+                          <li class="nav-item"  >
+                            <a class="nav-link " data-toggle="tab" href="#home" id="ab">Home</a>
+                          </li>
+                          <li class="nav-item"  >
+                            <a class="nav-link" data-toggle="tab" href="#menu1"  id="ab">Menu 1</a>
+                          </li>
+                          <li class="nav-item" >
+                            <a class="nav-link" data-toggle="tab" href="#menu2"  id="ab">Menu 2</a>
+                          </li>
+                        </ul>
+                        
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                          <div class="tab-pane container fade" id="home">Data1</div>
+                          <div class="tab-pane container fade" id="menu1">Dat2</div>
+                          <div class="tab-pane container fade" id="menu2">Data3</div>
+                        </div>
+
+
+                        <ul class="nav nav-tabs">
+                          <li class="nav-item" id="bc">
+                            <a class="nav-link active" data-toggle="pill" href="#home">Home</a>
+                          </li>
+                          <li class="nav-item"  id="bc">
+                            <a class="nav-link" data-toggle="pill" href="#menu1">Menu 1</a>
+                          </li>
+                          <li class="nav-item"  id="bc">
+                            <a class="nav-link" data-toggle="pill" href="#menu2">Menu 2</a>
+                          </li>
+                        </ul> 
+                        
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                          <div class="tab-pane container active" id="home">1</div>
+                          <div class="tab-pane container fade" id="menu1">2</div>
+                          <div class="tab-pane container fade" id="menu2">3</div>
+                        </div>
+
+                        <p class="ho">Text</p>
+                        <button class="btn">ClickMe</button>
+
+
+                        
+
+
+
+
+
+              

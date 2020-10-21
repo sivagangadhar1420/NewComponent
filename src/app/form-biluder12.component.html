@@ -1,0 +1,33 @@
+<form action="" (ngSubmit)="onSubmit(empFormss.value)" [formGroup]="empFormss"> 
+    <input type="text" name="nm1" id="nm1" formControlName="fullName">
+    <span>{{lengths}}</span>
+    <input type="text" name="nm1" id="nm1" formControlName="id">
+    <button type="submit">Submit</button>
+    <button type="button" (click)="loadData()">LoadFormData</button>
+    
+    
+    
+    {{empFormss.get('id').value}}
+    formValues: <pre>{{empFormss.value | json}}</pre>
+    formstatus:  <pre>{{empFormss.status | json}}</pre>
+    
+</form>
+
+<input type="file" name="lm" id="nm" (change)="onFileHandle1($event)">
+<input type="file" name="lm" id="nm" (change)="onFileHandle2($event.target.files)">
+<input type="file" name="lm" id="nm" (change)="onFileHandle3($event.target.files)">
+<input type="file" name="lm" id="nm" (change)="onFileHandle4($event)">
+<input type="file" name="lm" id="nm" (change)="onFileHandle5($event.target.files)">
+<input type="file" name="lm" id="nm" (change)="onFileHandle6($event)">
+<input type="file" name="lm" id="nm" (change)="onFileHandle7($event.target.files)">
+
+
+
+<div *ngFor="let pl of typedd">
+   Type: {{pl.fileType}}
+   Name: {{pl.fileName}}
+</div>
+
+
+
+

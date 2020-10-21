@@ -1,0 +1,8 @@
+
+<div *ngFor="let ol of reData">
+<p>{{ol.id}}</p>
+<p>{{ol.name}}</p>
+<!-- <a routerLinkActive="active" [routerLink]="['/rn', ol.id]">GoToRn1</a> -->
+
+<a (click)="onSelectLists(ol)">GoToRn1</a>
+</div>

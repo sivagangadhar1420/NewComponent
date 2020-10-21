@@ -1,0 +1,11 @@
+<h2>DepartmentList</h2>
+<div *ngFor="let pt of dList">
+    <p>{{pt.departmentId}}</p>
+    <p>{{pt.departmentName}}</p>
+</div>
+
+<h2>You selected id {{deptId}}</h2>
+
+<a (click)="goPrevious()" style="cursor: pointer;">Previous</a>
+<br>
+<a (click)="goNext()"  style="cursor: pointer;">Next</a>

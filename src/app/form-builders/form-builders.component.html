@@ -1,0 +1,395 @@
+<button mat-raised-button color="primary">Accent</button>
+<p>server-forms works!</p>
+<input type="text" [value]="name" (input)="naming($event)"><br>
+{{name}}
+<br>
+
+{{getFullName()}}
+
+
+<br>
+<app-radio-files [all]="plo" [male]="getMalePlayers()" [female]="getFeMalePlayers()" 
+                 (radioFileoutPut)="onEmployeCountRadioButtonChange($event)">
+</app-radio-files>
+<table>
+    <thead>
+    <tr>
+<th>Name</th>
+<th>ID</th>
+<th>Gender</th>
+
+<th>Salary</th>
+    </tr>
+</thead>
+<tbody>
+    <ng-container *ngFor="let pt of objArray;">
+        <tr *ngIf="selectedEmployeeRadioButton == 'All' || selectedEmployeeRadioButton==pt.gender">
+
+        <td>{{pt.name}}</td>
+        <td>{{pt.id}}</td>
+        <td>{{pt.gender}}</td>
+        <td>{{pt.salary}}</td>
+     </tr>
+     </ng-container>
+
+    <tr *ngIf="!objArray">
+        <td colspan="5">Loading Data Please wait</td>
+    </tr>
+    <tr *ngIf="objArray && objArray.length == 0">
+        <td>No Employees here to display</td>
+    </tr>
+
+</tbody>
+</table>
+
+
+
+<br>
+
+
+
+<div *ngFor="let pt of objArray | gpipe : 500:1000 ">
+    <!-- {{pt.id }}{{pt.name | uppercase}}{{pt.gender}} -->
+    {{pt.id }}{{pt.name}}{{pt.gender}}{{pt.salary}}
+    
+</div>
+<br>
+<input type="checkbox" name="nm" id="nm" [(ngModel)]="checkedBox">
+<input type="radio" name="nm" id="nm11" value="Male" checked [(ngModel)]="checkedRadio">
+<input type="radio" name="nm" id="nm11" value="FeMale" [(ngModel)]="checkedRadio">
+
+<button [disabled]="checkedBox">Button</button>
+
+<button [disabled]="checkedRadio">{{checkedRadio}}</button>
+
+
+
+<form action="" (ngSubmit)="onSubmit1()" #fnForm="ngForm" class="my-4" >
+    <div class="form-group ">
+    <div class="row">
+
+    <div class="col-md-3">
+    <input type="text" name="nm1" id="nm1" [(ngModel)]="price" class="form-control">
+  </div>
+  
+  <div class="col-md-3">
+    <input type="text" name="nm2" id="nm2" [(ngModel)]="quantity" class="form-control">
+  </div>
+  <div class="col-md-3">
+    <input type="text" name="nm3" id="nm3" [(ngModel)]="age" class="form-control">
+  </div>
+
+  <div class="col-md-3">
+    <button class="btn btn-primary" type="submit">AddItems</button>
+  </div>
+
+</div>
+</div>
+</form>
+
+
+<div *ngFor="let pt of res11; let i=index">
+    <input type="text" class="form-control" name="nm" id="nm" value="{{pt.price}}">
+    
+    <!-- <input type="text" class="form-control" name="nm" id="nm" value="{{pt.quantity}}"> -->
+    
+    <!-- <input type="text" class="form-control" name="nm" id="nm" value="{{pt.age}}"> -->
+</div>
+<!-- <div>Yes I am reay To Die...!!!!  ::::)))</div> -->
+<div class="container">{{message}}</div>
+
+<div class="container">
+    
+<!-- <form  [formGroup] = "empForm" #fnForm="ngForm"  (ngSubmit)= "onSubmit(fnForm.value);" novalidate> -->
+<form  [formGroup] = "empFormss" #fnForm="ngForm"  (ngSubmit)= "onSubmit(empFormss.value);" novalidate>
+
+
+    <div class="form-group" >
+        <label for="ln">ID:</label>
+        <input type="text" name="lName" id="ln" class="form-control" formControlName="id" required>
+           <!-- <div  *ngIf="laststName.errors &&(lastName.pristine || lastName.touched);"> -->
+
+<div *ngIf="empFormss.controls['id'].errors && empFormss.controls['id'].touched;">
+<p *ngIf= "empFormss.controls['id'].errors.required" class="alert-danger">Email Required..</p>
+<p *ngIf=" empFormss.controls['id'].errors.dmnErr" class="alert-danger">Must be only Existing Mail</p>
+           
+            </div>
+               
+    </div>
+
+
+    
+
+    <div class="form-group" >   
+        <label for="name">FirstName:</label>
+        
+        <input type="text" name="fName" id="name" 
+        [class.is-invalid]="empFormss.get('fNamed').invalid && empFormss.get('fNamed').touched "
+        class="form-control"
+        formControlName="fNamed" required/>
+        <!-- <div  *ngIf="firstName.errors &&(firstName.pristine || firstName.touched);"> -->
+    <div *ngIf="empFormss.controls['fNamed'].errors && empFormss.get('fNamed').invalid  && empFormss.get('fNamed').dirty && empFormss.get('fNamed').touched;">
+        <p *ngIf= "empFormss.controls['fNamed'].errors.required && empFormss.get('fNamed').invalid" class="alert-danger">Name Required..</p>
+        <p *ngIf="empFormss.controls['fNamed'].errors.pattern  && empFormss.get('fNamed').invalid" class="alert-danger">Must  not be an specialchars </p>
+        <p *ngIf="empFormss.controls['fNamed'].errors.maxlength" class="alert-danger">Length must be only  a 8 charecters only</p>
+            
+    </div> 
+          
+    <div  *ngIf="!empFormss.controls['fNamed'].errors &&(empFormss.controls['fNamed'].dirty || empFormss.controls['fNamed'].touched);">
+                
+              
+        
+        <!-- It Will kept the default value as Valid using of pristine -->
+                <!-- <div *ngIf="!firstName.errors &&(firstName.pristine || firstName.touched);"> -->
+                    <ul><li *ngFor= "let c of changer">{{c}}</li></ul>
+                    <!-- {{changer}} -->
+                      <p class="alert-success">Valid...</p>
+
+                 </div>
+                       </div>  
+               
+            
+     <div class="form-group" >
+        <label for="ln">LastName:</label>
+        <input type="text" name="lName" id="ln" class="form-control" formControlName="lName" required>
+           <!-- <div  *ngIf="laststName.errors &&(lastName.pristine || lastName.touched);"> -->
+
+<div *ngIf="empFormss.controls['lName'].errors && (empFormss.controls['lName'].dirty || empFormss.controls['lName'].touched);">
+<p *ngIf= "empFormss.controls['lName'].errors.required" class="alert-danger">Name Required..</p>
+<p *ngIf="empFormss.controls['lName'].errors.pattern" class="alert-danger">Must  not be an specialchars </p>
+<p *ngIf=" empFormss.controls['lName'].errors.maxlength" class="alert-danger">Length must be only  a 8 charecters only</p>
+           
+            </div>
+                
+               
+<div  *ngIf="!empFormss.controls['lName'].errors &&(empFormss.controls['lName'].dirty || empFormss.controls['lName'].touched);">
+                <!-- It Will kept the default value as Valid using of pristine -->
+    <!-- <div class="form-control-valid-feedback" *ngIf="!lastName.errors &&(lastName.pristine || lastName.touched);"> -->
+    <p class="alert-success">Valid...</p>
+        </div>
+    </div>
+
+
+        
+     <div class="form-group" >
+        <label for="ln">FinalName:</label>
+        <input type="text" name="finalName" id="ln" class="form-control"
+        [class.is-invalid]="finalname.invalid && finalname.touched && finalname.dirty"
+        formControlName="finalName" required>
+
+        <div *ngIf="finalname.errors && finalname.invalid  && finalname.dirty && finalname.touched;">
+            <p *ngIf= " finalname.errors.required && finalname.invalid" class="alert-danger">Name Required..</p>
+            <p *ngIf=" finalname.errors.pattern  &&  finalname.invalid" class="alert-danger">Must  not be an specialchars </p>
+            <p *ngIf=" finalname.errors.maxlength" class="alert-danger">Length must be only  a 8 charecters only</p>
+            <p *ngIf=" finalname.errors.cName" class="alert-danger">Cannot be allowed the name of {{finalname.errors.forbiddenName.value}}</p>
+             
+        </div> 
+                
+         <div  *ngIf="!finalname.errors && finalname.dirty && finalname.touched;">
+                <p class="alert-success">Valid...</p>
+        </div>
+    
+  </div>
+
+
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" formControlName="password" class="form-control"  [class.is-invalid]="empFormss.get('password').invalid && empFormss.get('password').touched ">
+   <div  *ngIf="empFormss.get('password').errors && (empFormss.get('password').dirty || empFormss.get('password').touched);">
+        <p *ngIf= " empFormss.get('password').errors.required" class="alert-danger">Password Required..</p>
+        <p *ngIf=" empFormss.get('password').errors.maxlength" class="alert-danger">Length must be only  a 8 charecters only</p>
+        <p *ngIf=" empFormss.get('password').errors.minlength" class="alert-danger">Length must be greater than 2  charecters</p>
+  
+    </div>
+        
+   <div *ngIf="!empFormss.get('password').errors && (empFormss.get('password').dirty || empFormss.get('password').touched);">
+            <p class="alert-success">Valid...</p>
+    </div>
+</div>
+
+  <div class="form-group">
+    <label>Confirm Password</label>
+    <input type="password"  formControlName="confirmPassword" 
+    [class.is-invalid]="empFormss.errors?.misMatch && 
+    empFormss.invalid?.misMatch && (empFormss.pattern?.misMatch || empFormss.errors.required?.misMatch)
+    " class="form-control">
+    <div *ngIf="empFormss.errors?.misMatch">
+        <p  class="alert-danger"> Should Match to Password </p>
+    </div>
+    
+</div> 
+   
+
+
+<div class="form-group">
+    <label>Email:</label>
+    <button type="button" (click)="addAlternateEmails()">AddEmails</button>
+    <input type="text" [class.is-invalid]="email.invalid && email.touched" formControlName="email" class="form-control">
+  
+    <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required</small>
+   
+    <div formArrayName="alternateEmails" *ngFor="let email of alternateEmails.controls; let i=index">
+        <input type="text" class="form-control my-1" [formControlName]="i">
+    </div>
+    
+    <input type="text" name="nml" id="nml" formControlName="gl1" [(ngModel)]="gll">
+    <button (click)='addGll()' type="button">Gllls</button>
+    <div *ngFor="let g of restArray">
+        <input type="text" name="g" id="g" value="{{g.g1}}">
+    </div>
+</div>
+
+
+
+<!-- <div formGroupName="emailGroup">
+    <label>Mail</label>
+    
+    <div class="form-group">
+
+    <input type="text" formControlName="fEmail1" class="form-control"  [class.is-invalid]="empFormss.controls['fEmail1'].invalid && empFormss.controls['fEmail'].touched ">
+    <div  *ngIf="empFormss.controls['fEmail1'].errors && (empFormss.controls['fEmail1'].dirty || empFormss.controls['fEmail1'].touched);">
+         <p *ngIf= " empFormss.controls['fEmail1'].errors.required" class="alert-danger">Password Required..</p>
+         <p *ngIf=" empFormss.controls['fEmail1'].errors.maxlength" class="alert-danger">Length must be only  a 8 charecters only</p>
+         <p *ngIf=" empFormss.controls['fEmail1'].errors.minlength" class="alert-danger">Length must be greater than 2  charecters</p>
+   
+        </div>
+
+    <div *ngIf="!empFormss.controls['fEmail1'].errors && (empFormss.controls['fEmail1'].dirty || empFormss.controls['fEmail1'].touched);">
+        <p class="alert-success">Valid...</p>
+    </div>
+ 
+</div> -->
+
+
+
+<!-- <div class="form-group">
+    <label>Confirm Mail</label>
+    <input type="password"  formControlName="cEmail" 
+    [class.is-invalid]="empFormss.errors?.misMatch1 && 
+    empFormss.invalid?.misMatch1 && (empFormss.pattern?.misMatch1 || empFormss.errors.required?.misMatch1)
+    " class="form-control">
+    <div *ngIf="empFormss.errors?.misMatch1">
+        <p  class="alert-danger"> Should Match to Password </p>
+    </div>
+    </div> -->
+<!-- </div> -->
+     
+
+
+
+
+
+
+
+
+<div class="form-group form-check">
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+  
+    <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1"
+    [(ngModel)]="sel" [ngModelOptions]="{standalone: true}" >
+{{sel}} -->
+
+    <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1"
+      [(value)]="sel"  formControlName="cBox" > -->
+
+  <!-- {{sel}} -->
+  <!-- {{empFormss.get('cBox').value}} -->
+
+
+  <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1"
+  [(ngModel)]="sel"  formControlName="cBox" >
+<br> -->
+
+  <!-- {{sel}} -->
+  <!-- {{empFormss.get('cBox').value}} -->
+
+  
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+      
+    <input type="checkbox" class="form-check-input" id="exampleCheck1"
+      [(ngModel)]="sel"  formControlName="cBox" >
+    <label class="form-check-label col-md-2" for="exampleCheck1">Check me out</label>
+  </div>
+
+  <!-- {{sel}} -->
+  <!-- {{empFormss.get('cBox').value}} -->
+
+  
+    <div class="form-group">
+    <label for="ln" class="label-control">Gender:</label>
+
+    <input type="radio" name="type" class="mx-2" id="m"  value="Male" formControlName="type">
+    <label for="m">Male</label> 
+    <input type="radio" name="type"  id ="fm" class="mx-2"  value="FeMale"  formControlName="type">  
+    <label for="fm">Female</label>
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+  
+        <!-- <input type="radio" name="type" class="mx-2" id="m"  value="Male" [(ngModel)]="gend" formControlName="type">
+        <label for="m">Male</label> 
+        <input type="radio" name="type"  id ="fm" class="mx-2"  value="FeMale" [(ngModel)]="gend" formControlName="type">  
+        <label for="fm">Female</label> -->
+        <!-- {{gend}} -->
+        <!-- {{empFormss.get('type').value}} -->
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    </div>
+
+    <div class="form-group">
+        <select name="sel" id="sl" class="form-control" formControlName= "degrees"  style="cursor: pointer;">
+            <option *ngFor = "let res of ar" [value] = "res" >{{res}}</option>
+        </select>
+    </div>
+
+   formValues: <pre>{{empFormss.value | json}}</pre>
+   formstatus:  <pre>{{empFormss.status | json}}</pre>
+   <hr>
+<div class="mx-3">
+   FirstNameValue: <pre>{{empFormss.get('fNamed').value}}</pre>
+   FirstNameStatus: <pre>{{empFormss.get('fNamed').status}}</pre>
+   FirstNameValue: <pre>{{empFormss.get('fNamed').value}}</pre>
+   FirstNameStatus: <pre>{{empFormss.get('fNamed').status}}</pre>
+
+   LastNameValue: <pre>{{empFormss.get('lName').value}}</pre>
+   LastNameStatus: <pre>{{empFormss.get('lName').status}}</pre>
+
+   GenderValue: <pre>{{empFormss.get('type').value}}</pre>
+   genderStatus: <pre>{{empFormss.get('type').status}}</pre>
+
+   OptionValue: <pre>{{empFormss.get('degrees').value}}</pre>
+   OptionStatus: <pre>{{empFormss.get('degrees').status}}</pre>
+
+
+   
+   
+   
+   
+</div>
+
+<button type="submit" class="btn btn-primary" [disabled] = "fnForm.invalid">submit</button>
+</form>
+
+
+<form action="" (ngSubmit)="addTempEmail()" >
+<div class="form-group">
+    <input type="text" name="n" id="n"  [(ngModel)]="tempEml">
+    <button type="submit">AddTempEmails</button>
+</div>
+</form>
+
+<div *ngFor="let pt of storeArray">
+    <input type="text" name="ml" id="ml" value="{{pt.tempEml}}">
+</div>
+
+<div class="continer">
+    <input type="file" name="" class="form-control" id="">
+    <br>
+<input type="file" name="nmf11" id="nmf11" class="form-control" (change)= "inpFiles($event)">
+<button type="button" class="btn btn-danger" (click)="imgUpload($event)">ImageUpload</button>
+<img src="{{image}}" alt="img" style="height:10rem; width:10rem">
+</div>
+</div>
+
+
+
+
+
+<!-- <img src="assets/images/dice1.png" alt="img"> -->

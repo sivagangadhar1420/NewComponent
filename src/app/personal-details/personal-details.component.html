@@ -1,0 +1,456 @@
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+  <!--                       Get The Value of Radio Buttons  Value
+
+  <input type="radio" name="gen" id="" value="Male" [(ngModel)]="res">
+  <input type="radio" name="gen" id="" value="FeMale" [(ngModel)]="res">
+  {{res}}
+
+  <!-- [ngModelOptions]="{standalone: true}" -->
+  
+<!--
+
+  <mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+  [(ngModel)]="favoriteSeason">
+  <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+    {{season}}
+  </mat-radio-button>
+</mat-radio-group>
+<div>Your favorite season is: {{favoriteSeason}}</div> -->
+
+<!-- <mat-radio-group aria-label="Select an option" [(ngModel)]="genders">
+  <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+    {{season}}
+  </mat-radio-button>
+</mat-radio-group>
+{{genders}} -->
+
+ <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+                                            <!-- Select box Getting Value of Select -->
+
+ <!-- <mat-select [(value)]="selected11"> -->
+  <!-- <mat-select formControlName="sSubject">
+    <mat-option value="">Select Subject</mat-option>
+    <mat-option value="option1">Option 1</mat-option>
+    <mat-option value="option2">Option 2</mat-option>
+    <mat-option value="option3">Option 3</mat-option>
+  </mat-select>
+</mat-form-field>
+  </div>
+</div> -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- {{thirdFormGroup.get('selectedOptions').value}} -->
+<!-- {{selected11}} -->
+
+
+
+<!-- <select name="n" id="n" [(ngModel)]="wkl">
+  <option value="value1">value1</option>
+  <option value="value2">value2</option>
+  <option value="value3">value3</option>
+  <option value="value4">value4</option>
+</select>
+{{wkl}} -->
+
+
+<!--               
+  <mat-form-field appearance="fill">
+    <select matNativeControl [(ngModel)]="selectedCar" name="car">
+      <option value="val1">Val1</option>
+      <option value="val2">Val2</option>
+      <option value="val3">Val3</option>
+    </select>
+  </mat-form-field>
+  <p> Selected car: {{selectedCar}} </p> -->
+  
+  
+  <!-- <mat-form-field appearance="fill">
+    <mat-label>Favorite car</mat-label>
+    <select matNativeControl [(ngModel)]="selectedCar" name="car">
+      <option value="" selected></option>
+      <option *ngFor="let car of cars" [value]="car">
+        {{car}}
+      </option>
+    </select>
+  </mat-form-field>
+  <p> Selected car: {{selectedCar}} </p> -->
+  
+  
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+                                                  <!-- Gttingthe Values Of CheckBox -->
+  
+  <!-- <mat-checkbox class="example-margin" [(ngModel)]="checkeded">Check me!</mat-checkbox>
+  <div *ngIf="checkeded" >
+  <button>ClickMe</button>
+</div>
+<mat-checkbox class="example-margin" [(ngModel)]="checkeded" >Check me!</mat-checkbox>
+<mat-checkbox class="example-margin" [disabled]="checkeded" >Check me!</mat-checkbox> -->
+
+
+
+<!-- <input type="checkbox" name="" id="" [(ngModel)]="checked">
+<input type="checkbox" name="" id="" [(ngModel)]="checked">
+<input type="checkbox" name="" id="" [disabled]="checked"> -->
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<!-- <button [value]="valButton" (click)="clickBtn($event)">clicked</button>
+{{valButton}} -->
+
+
+<!-- <div class="from-group">
+  Male: <input type="radio" name="gender" id="gender1" formControlName="gender" value="Male"> &nbsp;&nbsp;&nbsp;
+   FeMale: <input type="radio" name="gender" id="gender2" formControlName="gender" value="FeMale">
+   <br>
+   {{empFormss.get('gender').value}}
+   
+
+   
+ </div>
+ -->
+
+
+ <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx -->
+ <!-- <ul>
+  <div *ngFor="let numbs of ['ar1','ar2','ar3','ar4','ar5', 'ar6']; let i=index">
+  <div>
+      Index:{{i}} Result:{{numbs}}
+      
+      <div *ngIf="i%3==0">InProgress</div>
+      <div *ngIf="i%3==1">Progress</div>
+      <div *ngIf="i%3== 2">Progressing</div>
+  </div>
+  </div>
+</ul>
+
+<button (click)="show1 = !show1">{{show1 ? 'hide' : 'show'}}</button>
+show = {{show1}}
+<br>
+<div *ngIf="show">Text to show</div>
+<button (click)="onClick()">Click</button>
+<button [disabled]="checked12">Click123</button> -->
+
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXxxxxxxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx -->
+
+<!-- <p>server-forms works!</p> -->
+<!-- <div>Yes I am reay To Die...!!!!  ::::)))</div> -->
+<!-- <div class="container">{{message}}</div>  -->
+
+<!--
+<div class="continer">
+    <input type="file" name="" class="form-control" id="">
+    <br>
+<input type="file" name="nmf11" id="nmf11" class="form-control" (change)= "inpFiles($event)">
+<button type="button" class="btn btn-danger" (click)="imgUpload($event)">ImageUpload</button>
+<img src="{{image}}" alt="img" style="height:10rem; width:10rem">
+</div>
+</div>
+ -->
+
+ <!-- <img src="assets/images/dice1.png" alt="img"> -->
+
+
+
+
+
+                                <!-- Attribute Directives -->
+
+<!-- <div [ngClass]="setClass()"  [ngStyle]="setStyles()">
+<h4 >TheText</h4>
+<h4>TheText</h4></div>
+<h4>TheText</h4>
+<h4>TheText</h4>
+<h4>TheText</h4>
+
+
+<button (click)="onClickBtn()" type="button">Click</button>
+<p class="txt1" id="cl">Text</p>
+<p class="txt1" id="cl1">Text</p>
+{{str}}
+<img src=""  alt="img" class="img-fluid" id="ig1" width="80vw">
+<img src="assets/images/spy.png" alt="img" id="ig2" class="img-fluid" width="20vw">
+<button (click)="tgImg()">Toggle</button>
+
+<h2>REference Field</h2>
+<input type="text" name="nm" id="nm1" #inp1>
+<button type="btn" (click)="refI(inp1.value)">Get</button>
+{{val}} 
+<span  [style.color]="red1">I am Red</span>
+<span [style.font-size.px]="font">Font</span>
+<span [style.color]=" !bl ? 'crimson' : 'black' ">Color</span> -->
+
+
+
+                                
+                                            <!-- Structeral Directives -->
+
+                                            <!-- ngIf, ngFor, ngSwitch -->
+
+
+<!-- <div *ngFor="let pl of storingData">
+        <div *ngIf="pl.age >=25">
+            {{pl.name}}{{pl.age}}
+        </div>
+</div> -->
+                                                <!-- Method1 ngIf -->
+
+<!-- <div *ngFor="let pl of storingData; let i=index">
+<div *ngIf="pl.age > 27  ; else elseBlock">
+    <div class="row container">
+ <p>Congrats</p> Mr/Ms :  {{pl.name}} and Yore Age is Valid and Yore {{pl.age}}  Old
+</div>
+</div>
+<ng-template #elseBlock>
+    <div class="row container">   
+ <p>Sorry</p>  Mr/Ms :  {{pl.name}} Your Not Valid to Process You
+    </div>
+
+    </ng-template>
+</div> -->
+                            
+                                <!-- Method-2 ngIf -->
+
+<!-- <div *ngIf="!display;else plBlock">
+    <h1>Code with Harry</h1>
+</div>
+<ng-template #plBlock>
+    <h2>I am Quit</h2>
+</ng-template>  -->
+
+                                                <!-- Method3 ngIf -->
+<!--
+<div *ngIf="!display ; then tblock; else eblock">
+</div>
+<ng-template #tblock>
+    <h3>I am Block</h3>
+</ng-template>
+<ng-template #eblock>
+<h3>I am Hidden</h3>
+</ng-template>
+
+<button (click)="togText()" type="button">ToggleText</button>
+<div *ngIf="show; else elseBlock">
+    I am Showing Here
+</div>
+<ng-template #elseBlock>
+    <h3>I am Hidden Here</h3>
+</ng-template> -->
+                                                    <!-- Ng-Switch-case -->
+
+            <!-- Duration: <span [ngSwitch] ="Duration">
+               <span *ngSwitchCase = 1>Daystart</span>  
+               <span *ngSwitchCase = 7>OneWeek</span>  
+               <span *ngSwitchCase = 30>Month</span> 
+               <span *ngSwitchCase = 365>Year</span>
+               <span *ngSwitchDefault>Plz Check Once</span> </span>
+
+        
+
+                <h1>SwitchCases</h1>
+                    <span [ngSwitch]="cl">
+                    <span *ngSwitchCase = "'red2'">I am Here</span>
+                    <span *ngSwitchCase = " 'red' ">I am Ovrer</span>
+                    <span *ngSwitchCase = " 'red1' " >I am Behind Of You</span>
+                    <span *ngSwitchDefault >  Where I am </span>
+                    
+                </span> -->
+                <!-- <span [ngSwitch]="result">
+                    <span *ngSwitchCase = "'admin'">I am Here</span>
+                    <span *ngSwitchCase = " 'sAdmin' ">I am Ovrer</span>
+                    <span *ngSwitchCase = " 'teacher' " >I am Behind Of You</span>
+                    <span *ngSwitchCase = " 'student' " >I am Behind Of You</span>
+                    <span *ngSwitchDefault >  Where I am </span>
+                </span>  -->
+
+              
+
+                <!-- <ul class="sidebar-menu">
+                  
+                    <li class="dropdown" *ngIf="roleId === 0">
+                        <a  class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Super Admins</span></a>               
+                    </li>
+                    <li class="dropdown" *ngIf="(roleId <= 1)">
+                        <a  class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Admins</span></a>               
+                    </li>
+                    <li class="dropdown" *ngIf="(roleId <= 2)">
+                        <a  class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Teachers</span></a>               
+                    </li>
+                    <li class="dropdown" *ngIf="(roleId <= 3)">
+                        <a  class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Students</span></a>               
+                    </li>
+                    <li class="dropdown" *ngIf="(roleId <= 4)">
+                        <a class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Data-Entry-Operators</span></a>               
+                    </li>
+                    </ul> -->
+                    
+              <!-- <ul>
+                  <li *ngIf="roleId === 0">Admins</li>
+                  <li *ngIf="(roleId <= 1)">Vendors</li>
+                  <li *ngIf="(roleId <= 2)">Teachers</li>
+                  <li *ngIf="(roleId <= 3)">Students</li>
+                  <li *ngIf="(roleId <= 4)">Iam Mankind</li>
+              </ul>   -->
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxx -->
+                 
+
+                                          <!-- NgFor -->
+                <!--
+            let i=index;
+               first as f;last as m; odd as p; even as g; -->
+                <!-- <div *ngFor="let lm1 of lm; let i=index;">
+                    {{i}} . {{lm1}}
+
+                </div>
+
+               -->
+
+                                                <!-- Toggling Button -->
+
+<!-- <button (click)="toggleBtn()" type="button">Toogle Button</button>
+<div *ngIf="ping; else elseBlock">
+  <button type="button">Toogling</button>
+</div>
+<ng-container #elseBlock>
+    I am hided
+</ng-container> -->
+
+
+<!-- <input type="radio" name="nnm1" id="" value="Male" (click)="rToggle()">
+
+<div *ngIf="ping1; else elseBlock1">
+<input type="radio" name="nm1" id=""  value="FeMale">
+</div>
+<ng-container #elseBlock1>
+  I am hide 2222
+</ng-container> -->
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+                                <!-- Getting Gender Value (Male Or FeMlae) -->
+
+ <!-- <input type="radio" name="gender" id="gender" value="male" [(ngModel)]="gender">
+ <br>
+ <input type="radio" name="gender" id="gender" value="female" [(ngModel)]="gender">
+ <br>
+ {{gender}} -->
+ 
+<!-- <input type="radio" name="gender" id="gender" value="male" [(ngModel)]="gender1">
+ <br>
+ 
+ <input type="radio" name="gender" id="gender" value="female" [(ngModel)]="gender1">
+ <br>
+ {{gender1}} -->
+
+ 
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+ <!-- <select name="nm11" id="ll" [(ngModel)]="selected">
+     <option value="valu1">value</option>
+     <option value="valu1">value1</option>
+     <option value="valu2">value2</option>
+     <option value="valu3">value3</option>
+ </select>
+ {{selected}} -->
+
+ <!--
+<input type="checkbox" name="" id="nm1" value="checked" [(ngModel)]="check">
+ {{check}} 
+-->
+
+
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+                                                        <!-- Object Data -->
+<!-- <div *ngFor="let res of emptyArray">{{res.startingName}}</div> -->
+
+                                            <!-- Array Data -->
+
+<!-- <div *ngFor="let res of cleanArray">{{res.id}}</div> -->
+
+                                                    <!-- Json Array -->
+                                            <!-- <h2>Jsonarray</h2>
+                                            <h2>  {{errorMessage}}</h2> -->
+                                          
+        <!-- <div *ngFor="let pt of jsonArray">{{pt.name}}</div> -->
+
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+        <!-- <h2>Personal-Details</h2>
+        <ul>
+        <li *ngFor="let pt of emps">
+            <p><a [routerLink] ="['/pd', pt.id]">ClickHere</a></p>
+            <span class="badge">{{pt.name}}  </span>{{pt.id}}
+        </li>
+</ul> -->
+
+<h2>Personal-Details</h2>
+<!-- <ul>
+<li *ngFor="let pt of emps" (click)="onSelected(pt)" [class]="isSelected(pt)">
+    <p><a [routerLink] ="['/pd', pt.id]">ClickHere</a></p>
+    <span class="badge">{{pt.name}}  </span>{{pt.id}}
+</li>
+</ul> -->
+
+
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+                                            <!-- Toggling List Items -->
+<!-- 
+<ul>
+    <li ><a (click)="selectList()" >selectList</a>
+    <ul *ngIf="selectedList">
+        <li>List1</li>
+        <li>List1</li>
+        <li>List1</li>
+        <li>List1</li>
+    </ul>
+    
+    </li>
+</ul> -->
+
+
+ <!-- <li><a (click)="selectList()"><i class="fa fa-graduation-cap"></i> Students <span class="fa fa-chevron-down"></span></a>
+    <ul *ngIf="selectedList">
+      <li routerLinkActive="active"><a href="#" routerLink="./students">List</a></li>
+      <li routerLinkActive="active"><a href="#" routerLink="./students/add">Add Students</a></li>
+    </ul>
+  </li>   -->
+    
+
+  <!-- <ul>
+<li><a (click)="onStudentsClick()"><i class="fa fa-graduation-cap"></i> Students <span class="fa fa-chevron-down"></span></a>
+  <ul class="nav child_menu bg-dark" [ngStyle]="{'display':studentsToggle === true ? 'block' : 'none'}">
+    <li routerLinkActive="active"><a href="#" routerLink="./students">List</a></li>
+    <li routerLinkActive="active"><a href="#" routerLink="./students/add">Add Students</a></li>
+  </ul>
+</li> 
+</ul> -->
+
+
+
+
+<!-- <li><a (click)="onStudentsClick()"><i class="fa fa-graduation-cap"></i> Students <span class="fa fa-chevron-down"></span></a>
+  <ul class="nav child_menu bg-dark" [ngStyle]="{'display': studentsToggle ? 'block' : 'none'}">
+    <li routerLinkActive="active"><a href="#" routerLink="./students">List</a></li>
+    <li routerLinkActive="active"><a href="#" routerLink="./students/add">Add Students</a></li>
+  </ul>
+</li>  -->
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<div class="container">
+  <ul class="items">
+      <!-- <li style="cursor: pointer;" *ngFor="let pt of data" (click)="selectList1(pt)"> -->
+        <li  *ngFor="let pt of data" [class.selectList]="FixingLists(pt)" style="cursor: pointer;"><a [routerLink] = "['/pd',pt.id]" >
+          <span class="badge badge-secondary">{{pt.id}}   {{pt.course}}</span>
+        </a>
+     </li>
+  </ul>
+</div>
+
+
+<h2>Input Data :</h2>{{parent}}
+<h2>Output Data: </h2> 
+<button type="button" (click)="fireEvent()">OutPut</button>
+<p>{{pp | titlecase}}
+    {{0.25 | percent }}
+</p>
+<div *ngFor="let pl of emps">
+    {{pl.name}}
+</div>

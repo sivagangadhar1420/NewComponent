@@ -1,0 +1,24 @@
+<p>Working</p>
+<table >
+    <thead>
+        <tr>
+    <th>Id:</th>
+    <th>Name:</th>
+    <th>Salary:</th>
+    <th>DateOfJoining</th>
+    <th>TypeOfemployee</th>
+</tr>
+</thead>
+<tbody *ngFor="let femp of resofemp">
+    <tr>
+        <td>{{femp.id}}</td>
+    <td>{{femp.name}}</td>
+    <td>{{femp.sal}}</td>
+    <td>{{femp.dataofjoining | date:medium}}</td>
+    <td>{{femp.typeofemployee}}</td>
+</tr>
+</tbody>
+
+</table>
+
+Result of Obsrvable is {{data}}

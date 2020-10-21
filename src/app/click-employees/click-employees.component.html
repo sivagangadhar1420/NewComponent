@@ -1,0 +1,25 @@
+<table>
+    <thead>
+        <tr>
+            <th>Index:</th>
+            <th>Id:</th>
+            <th>Name:</th>
+        </tr>
+        </thead>
+    <tbody>
+
+        <tr *ngFor="let pt of ar; let i =index">
+            <td>{{i+1}}</td>
+            <td>{{pt.name}}</td>
+            <td>
+                <a class="btn btn-link" routerLinkActive="active" [routerLink]="['/cEmployee', pt.Id]">{{pt.Id}}</a>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+
+<!-- <input type="text" name="nm" id="nm" [ngStyle]="colour21()"> -->
+
+<input type="text" name="nm" id="nm" [(ngModel)]="colour1" [style.background]="colour1">
+

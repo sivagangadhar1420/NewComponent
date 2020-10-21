@@ -1,0 +1,56 @@
+<app-if-styles></app-if-styles>
+
+<input type="text" name="" id="nm3" oninput="nm4.value=nm3.value">
+<input type="text" name="" id="nm4">
+
+<!-- <app-personal-details [parent]="lmName" (ChildData1)="msgFun($event)"></app-personal-details> -->
+<!-- <app-personal-details [parent]="lmName" (ChildData1)="msg = $event"></app-personal-details> -->
+<app-my-input-my-out-put [parentHere]="ph" (childHere)="outputFunn($event)"></app-my-input-my-out-put>
+<br> 
+getting  Data From parent {{ComingDAta}}
+<h2>{{msg}}</h2>
+<h1>Routing starts</h1>
+<div class="container">
+
+    <button class="btn btn-primary m-4" routerLink="">HubPage</button>
+    <button class="btn btn-primary m-4" routerLink="home">HomePage</button>
+    <button class="btn btn-primary m-4" routerLink="fb">Forms</button>
+    <button class="btn btn-primary m-4" routerLink="/sf">ServerFormsForms</button>
+<button class="btn btn-primary m-4" routerLink="emp">Employees</button>
+<a class="btn btn-link m-4" routerLink="/dept">DepartMents</a>
+
+<button class="btn btn-primary m-4" routerLink="res">REsultEmployees</button>
+
+<button class="btn btn-primary m-4" routerLink="bs">BsComponent</button>
+<button class="btn btn-primary m-4" (click)="goHome()">SecondDepartments</button>
+<button class="btn btn-primary m-4" routerLink="Junk">NotFound</button>
+<a routerLink="pd" routerLinkActive="active" class=" act">PersonaLDetails</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="btn btn-primary m-4" routerLink="rn">RNC</button><br>
+<button class="btn btn-primary m-4" routerLink="pf">PFolder</button>
+<button class="btn btn-primary m-4" routerLink="cEmployee">ClickEDEmployees</button>
+
+<button class="btn btn-primary m-4" routerLink="fb123">FormBuilders123</button>
+
+<button class=" m-4" routerLink='popup'>PopUp</button>
+<button class=" m-4" mat-button>PopUp</button>
+
+
+<!-- <a routerLink="vs" routerLinkActive="active" class=" act">VishwasSena</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+<!-- <a routerLink="pd1" routerLinkActive="active" class=" act">PersonaLists</a> -->
+
+<br>
+<hr>
+<h1>App Router Here</h1>
+<router-outlet></router-outlet>
+
+
+
+
+</div>
+
+
+<!-- Switching Alert succes and Danger Component  -->
+
+<div>
+<ng-container *ngComponentOutlet="alert" ></ng-container> 
+<input type="button" value="ToggleColors" (click)="toggleSwitch()" /></div>

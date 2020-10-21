@@ -1,0 +1,150 @@
+
+<button class="btn btn-info"  type="button" data-toggle="modal" data-target="#add1">AddItemsHere</button>
+<br>
+
+<input type="file" name="nmpl" id="nmpl" (change)="handleFileInput($event.target.files)">
+<div *ngFor="let pd of typedd">
+    <p>Type: {{pd.fileType}}</p>
+    <p>{{pd.fileName}}</p>
+</div>
+
+
+
+
+<div id="add1" class="modal">
+    <div class="modal-dialog  my-5">
+
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <h4 class="modal-title">Edit</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="empFormss" (ngSubmit)="onFormSubmit(empFormss.value)" #emp1="ngForm">
+                <div class="form-group row">
+                    <label for="id" class="label-control col-md-12">ID:</label>
+                    <div class="col-md">
+            <input type="text" class="form-control" formControlName="id" id="id">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="id" class="label-control col-md-12">FirstName:</label>
+                    <div class="col-md">
+            <input type="text" class="form-control" formControlName="fName" id="fName">
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label for="id" class="label-control col-md-12">LastName:</label>
+                    <div class="col-md">
+            <input type="text" class="form-control" formControlName="lName" id="lName">
+                    </div>
+                </div>
+
+                <div class=" form-check row">
+
+                    <label for="Courses Access"><Strong>Courses Access</Strong></label>
+               
+                <div class="form-check form-check-inline ml-4">
+                    <input class="form-check-input" type="radio"  formControlName="courses" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">Public</label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio"  formControlName="courses" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Private</label>
+                  </div>
+                </div>
+                <div class="row">
+                    <label for="select-box" class="select-box col-md-12">Languages</label>
+                    <div class="col-md">
+
+                        <select name="select-box" id="select-box" class="form-control" formControlName="selectbox" >
+                            <option selected disabled>Selected</option>
+                            <option value="Option-1">Option-1</option>
+                            <option value="Option-2">Option-2</option>
+                            <option value="Option-3">Option-3</option>
+                        </select>
+                </div>
+                    </div>
+
+
+                    
+                <div class="row">
+                    <label for="select-box" class="select-box col-md-12">File Type</label>
+                    <div class="col-md">
+                      <input type="file" name="nfpfm" id="lffgp" class="form-control" (change)="handleFileInput($event)" formControlName="fileType">
+                       </div>
+                    </div>
+
+
+         <div>
+            <div class="btn-group col-sm-12 m-2" style="align-items: center;">
+            <button class="btn btn-info m-auto col-sm-2" type="submit" [disabled]="empFormss.invalid">Submit</button>
+          </div>
+        </div>
+          
+        </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+
+
+
+    
+
+
+<br>
+<br>
+<br>
+<br>
+<!-- <table class="table table-bordered"> 
+    <thead>
+      <tr>
+          <th>ID:</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Course Ascess</th>
+        <th>Language</th>
+        <th>File Type</th>
+        
+    </tr>
+        
+    </thead>
+    <tbody >
+
+  <tr *ngFor="let otpt of res11;">
+    
+        <td>{{otpt.id}}</td>
+        <td>{{otpt.firstName}}</td>
+        <td>{{otpt.lastName}}</td>
+        <td>{{otpt.courses}}</td>
+        <td>{{otpt.selectBox}}</td>
+        <td> -->
+          <!-- <span>{{json.fileType}}</span> -->
+           <!-- <span *ngFor="let dt of typedd">
+            {{dt.fileType}}
+          </span> -->
+        <!-- </td>
+
+
+       
+      </tr>
+
+    </tbody>
+  </table> -->
+
+       
+
+
+    

@@ -1,0 +1,69 @@
+/* #ab:active{
+    border: 2px solid red;
+} */
+
+ /* #ab:hover{
+
+     border-bottom: 2px solid yellowgreen;
+    }  */ 
+
+
+/* li:hover{
+    background-color: yellow;
+    cursor: pointer;
+}  */
+
+ /* a:hover{
+    background-color: tomato;
+ }  */
+
+ /* ul li:hover{
+     border-bottom: 2px solid red;
+ } */
+
+ /* ul a:active{
+     border-bottom: 2px solid red;
+ } */
+
+ /* ul li #ab:hover{
+    border-bottom: 2px solid red;
+} */
+
+  /* #ab:focus{
+    border-bottom: 2px solid red;
+} */
+
+li a:focus{
+    border-bottom: 2px solid red;
+}
+
+
+  /* li #ab:active{
+    border-bottom: 2px solid red;
+} */
+
+/* ul li #ab:target{
+    background-color: royalblue;
+} */
+
+.ho:hover{
+    background-color: red;
+} 
+.ho:active{
+    background-color: saddlebrown;
+}
+.ho:focus{
+    background-color: seagreen;
+}
+
+.btn:hover{
+    background-color: red;
+
+}
+.btn:active{
+    background-color: blue;
+}
+.btn:focus{
+    background-color: chartreuse;
+}
+

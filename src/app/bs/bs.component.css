@@ -1,0 +1,32 @@
+/* .ng-valid:required{
+     */
+     input.ng-valid:not(form), input.ng-valid:required{
+    border: 1px solid green;
+}
+input.ng-invalid:not(form){
+    border: 1px solid red;
+}
+.cl1{
+    background-color: red;
+}
+.clTech{
+    background-color: darkmagenta;
+}
+.stl1{
+font-size: 3rem;
+}
+
+
+.stl2{
+    background-color:crimson;
+}
+
+.stl3{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.rest1{
+background-color: crimson;
+}
+.rest2{
+    color:blue
+}

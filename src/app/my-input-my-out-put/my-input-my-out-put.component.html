@@ -1,0 +1,17 @@
+<input type="text" [(ngModel)]="value1" >
+<br>
+<input type="text" [(ngModel)]="value2">
+<br>
+<button (click)="ChildEvent()">Click2Send</button>
+<br>
+
+OutPut data Here : &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" [(ngModel)]="value3" (ngModelChange)="inputChildData($event)">
+
+Value - 1 IS :  {{value1}}
+Value - 2 IS :  {{value2}}
+Vlue is :   {{value3}}
+Ia m The Result:  {{parentHere}} 
+Value - 3 IS  (OutPut Value is ): {{parentHere}} 
+
+
+

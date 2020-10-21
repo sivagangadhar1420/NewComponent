@@ -1,0 +1,145 @@
+<p style="color: red;">alert-danger works!</p>
+{{name}}
+
+
+
+<div class="row">
+    <h2>Add Manager Registration form</h2>
+    <ul class="nav nav-tabs ml-auto">
+        <li class="nav-item">
+          <a class="nav-link " href="#"><i class="fa fa-chevron-up"></i></a>
+        </li>
+        <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"> <i class="fa fa-wrench"></i>  </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-times"></i></a>
+        </li>
+        </ul>
+    </div>
+      
+    
+    
+    
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  -->
+<!-- <form class="my-4"  [formGroup] = "empFormss" #fnForm="ngForm"  (ngSubmit)= "onSubmit(empFormss.value);" novalidate> -->
+<!-- <form [formGroup]="empFormss" #fnForms="ngForm" (ngSubmit)="onSubmit()" id="demo-form2" novalidate> -->
+
+    <!-- <form [formGroup]="empFormss" (ngSubmit)="onSubmit()" id="demo-form2" data-parsley-validate=""  novalidate="">
+  
+    <div class="form-group">
+        <label for="fn" class="label-control">Firstname:</label> 
+        <div class="row">
+        <div class="col-md-10 col-sm-8 has-feedback">
+
+    <input type="text" name="fName" id="fn" class="form-control has-feedback-left placeicon " formControlName="fNamed" placeholder="Enter You're First Name" required>
+    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span> -->
+    <!-- <div *ngIf="empFormss.controls['fNamed'].errors && (empFormss.controls['fNamed'].dirty || empFormss.controls['fNamed'].touched);">
+        <p *ngIf= " empFormss.controls['fNamed'].errors.required" class="alert-danger">Name Required..</p>
+        <p *ngIf=" empFormss.controls['fNamed'].errors.pattern" class="alert-danger">Must  not be an specialchars </p>
+        <p *ngIf=" empFormss.controls['fNamed'].errors.maxlength" class="alert-danger">Length must be...</p>
+    </div> 
+    
+    <div  *ngIf="!empFormss.controls['fNamed'].errors &&(empFormss.controls['fNamed'].dirty || empFormss.controls['fNamed'].touched);">
+        <p class="alert-success">Valid...</p>
+    </div> -->
+
+<!-- 
+</div></div>
+    </div>
+    
+    
+    <div class="form-group">
+    <label for="em" class="label-control">Email:</label>
+    <div class="row">
+        <div class="col-md-10 col-sm-12 has-feedback">
+                          
+        <input type="email" name="eml" id="em" class="form-control has-feedback-left" formControlName="eml" required placeholder=" Enter Your'e Mail">
+        <span class="fa fa-envelope left form-control-feedback"></span> -->
+    <!-- <div *ngIf="empFormss.controls['eml'].errors && (empFormss.controls['eml'].dirty || empFormss.controls['eml'].touched);">
+    <p *ngIf= "empFormss.controls['eml'].errors.required" class="alert-danger">Email Required..</p>
+    <p *ngIf=" empFormss.controls['eml'].errors.pattern" class="alert-danger">Must  be  specialchars </p>
+    <p *ngIf=" empFormss.controls['eml'].errors.maxlength" class="alert-danger">Length must be only  a 6 charecters only</p>
+    </div>
+        
+     <div  *ngIf="!empFormss.controls['eml'].errors &&(empFormss.controls['eml'].dirty || empFormss.controls['eml'].touched);">
+        <p class="alert-success">Valid...</p>
+            </div>
+     -->
+        <!-- </div>
+    </div>
+    </div>  
+    
+    
+    <div class="row">
+        <div class="col-md-2">
+        <label for="cd" class="label-control">Country Code:</label> 
+        </div>
+        <div class="col-md">
+            <label for="cd" class="label-control">MobileNumber:</label> 
+        </div>
+    </div>
+        <div class="form-group row">
+            <div class="col-md-2">
+                <select name="sel" id="sl" class="form-control has-feedback-left" formControlName= "cd"  style="cursor: pointer;">
+                    <option *ngFor = "let res of ar">{{res}}</option>
+                    </select>
+                    <span class="fa fa-flag form-control-feedback left" aria-hidden="true"></span>
+                </div>
+             
+<div class="col-md-8 has-feedback">
+<input type="text" name="lName" id="em" class="form-control has-feedback-left" formControlName="numb" required placeholder=" Enter Your'e Password">
+    <span class="fa fa-phone left form-control-feedback"></span> -->
+    <!-- <div *ngIf="empFormss.controls['numb'].errors && (empFormss.controls['numb'].dirty || empFormss.controls['numb'].touched);">
+        <p *ngIf= "empFormss.controls['numb'].errors.required" class="alert-danger">MobileNumber Required..</p>
+        <p *ngIf=" empFormss.controls['numb'].errors.maxlength" class="alert-danger">Length must be 10 charecters only</p>
+    </div> 
+    <div  *ngIf="!empFormss.controls['numb'].errors &&(empFormss.controls['numb'].dirty || empFormss.controls['numb'].touched);">
+        <p class="alert-success">Valid...</p>
+            </div>
+             -->
+                <!-- </div>
+            </div>
+                    
+
+            <div class="form-group">
+                <label for="pwd" class="label-control">Password:</label>
+            
+            <div class="row">
+                
+                <div class="col-md-10 col-sm-12 has-feedback">
+                <input type="text" name="lName" id="em" class="form-control has-feedback-left" formControlName="pwd" required placeholder=" Enter Your'e Password">
+                <span class="fa fa-key left form-control-feedback"></span> -->
+            <!-- <div *ngIf="empFormss.controls['pwd'].errors && (empFormss.controls['pwd'].dirty || empFormss.controls['pwd'].touched);">
+            <p *ngIf= "empFormss.controls['pwd'].errors.required" class="alert-danger">Password Required..</p>
+            <p *ngIf=" empFormss.controls['pwd'].errors.maxlength" class="alert-danger">Length must be  more Than 6 charecters only</p>
+            </div>
+                
+             <div  *ngIf="!empFormss.controls['pwd'].errors &&(empFormss.controls['pwd'].dirty || empFormss.controls['pwd'].touched);">
+                <p class="alert-success">Valid...</p>
+             </div>
+             -->
+                <!-- </div>
+                
+            </div>
+            </div>  
+            
+        
+    <div class="item form-group">
+        <div class="col-md-12 col-sm-12">
+            <button class="btn btn-primary" type="button">Reset</button>
+            
+<button class="btn btn-primary" type="reset">Edit Manager data</button>
+<button class="btn btn-danger" type="reset">Delete Manager</button>              
+<button type="submit" class="btn btn-success">Add Manager</button>
+
+        </div>
+    </div>
+
+</form>    
+     -->

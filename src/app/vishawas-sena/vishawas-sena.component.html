@@ -1,0 +1,20 @@
+<h2>DepartmentList</h2>
+<div *ngFor="let pt of dList">
+    <p>{{pt.departmentId}}</p>
+    <p>{{pt.departmentName}}</p>
+</div>
+
+
+<button routerLink="cn">Click</button>
+<button routerLink="cn1">CClick</button>
+<router-outlet></router-outlet>
+
+
+<h2>You selected id {{deptId}}</h2>
+
+<a (click)="goPrevious()" style="cursor: pointer;">Previous</a>
+<br>
+<a (click)="goNext()"  style="cursor: pointer;">Next</a><br>
+<button (click)="goBack()"  style="cursor: pointer;">GoBack</button>
+<input type="text" name="nm" id="nm" [(ngModel)]="value" (ngModelChange)="changeValue($event)">
+{{value}}

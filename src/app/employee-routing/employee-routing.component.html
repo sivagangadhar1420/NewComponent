@@ -1,0 +1,37 @@
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Salary</th>
+                
+                <th>departmentId</th>
+                
+                <th>departmentName</th>
+                
+                <th>DetailsOfEmployee</th>
+            </tr>
+        </thead>
+    
+
+    <tbody  *ngFor="let otp of remp">
+        <tr>
+            <td> {{otp.id}}</td>
+            <td> {{otp.name}}</td>
+            <td> {{otp.salary}}</td>
+            <td> 
+                {{otp.department.departmentId}}</td>
+            <td> {{otp.department.departmentName}}
+            </td>
+            <td><a [routerLink] = "['/emp', otp.id, otp.department.departmentId]">Details</a></td>
+        </tr>
+    </tbody>
+    
+</table>
+<div *ngIf="selectedEmployee !== null ">
+   EmpId: {{selectedEmployee.id}} <br>
+   EmpName: {{selectedEmployee.name}} <br>
+   EmpSalry:  {{selectedEmployee.salary}}
+</div>
+</div>

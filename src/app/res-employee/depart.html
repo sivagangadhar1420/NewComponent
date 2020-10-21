@@ -1,0 +1,26 @@
+<h2>working</h2>
+<div  class="container">
+  
+   <table style="padding: 3px;">
+      <thead  style="border: 2px solid red; ">
+         <tr>
+         <th  style="border: 2px solid green;">Id</th>
+         <th  style="border: 2px solid green;">Name</th>
+         <th style="border: 2px solid green;">Details</th>
+      </tr>
+   </thead>
+  <tbody *ngFor="let otp of dptcmpnt"   style="border: 2px solid blue;">
+        <tr  style="border: 2px solid green;">
+        <td  style="border: 2px solid green;"> {{otp.departmentId}}</td>
+        <td  style="border: 2px solid green;">   {{otp.departmentName}}</td>
+        <td><a [routerLink] = "['/dept',otp.departmentId]">Details</a></td>  </tr>
+       
+  </tbody>
+   </table>
+
+  <hr>
+   Department-Id: {{selectedEmployee.departmentId}} <br>
+   Department-Name: {{selectedEmployee.departmentName}} <br>
+    
+   
+</div>
